@@ -1,0 +1,11 @@
+from odoo import models, fields
+
+
+class {{ class_name }}(models.Model):
+    _name = "{{ model }}"
+    # _inherit = ['mail.thread']
+    _description = "{{ description }}"
+    _order = "id desc, name"
+
+    name = fields.Char(required=True)
+
