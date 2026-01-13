@@ -166,14 +166,19 @@ class InteractiveMenuInserter:
 
         if self.ctx.debug:
             lines.append(
-                f"cursor={self.cursor}\n"
-                f"parent={self.parent}\n"
+                f'cursor={self.cursor}\n'
+                f'parent={self.parent}\n'
             )
 
         if self.parent is None:
             self._render_parent_selection(lines)
-            lines.append("")
-            lines.append("Press Enter to select parent menu")
+            lines.append('')
+            lines.append(
+                f'Use ↑ / ↓ to navigate, ← / → to expand or collapse the menu.'
+            )
+            lines.append(
+                'Press Enter to select the parent menu or q to cancel.'
+            )
         else:
             self._render_index_selection(lines)
             lines.append("")
