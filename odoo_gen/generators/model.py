@@ -24,7 +24,7 @@ class ModelGenerator(BaseGenerator):
             ),
             self._write(
                 ctx.models_dir / "__init__.py",
-                f"from . import {ctx.module_model}\n",
+                f"from . import {ctx.model_underscore}\n",
                 mode=WriteMode.APPEND,
                 details=f"Update models __init__"
             ),

@@ -84,11 +84,11 @@ class ProjectContext:
 
     @property
     def model_path(self) -> Path:
-        return self.models_dir / f'{self.module_name}.{self.model_underscore}.py'
+        return self.models_dir / f'{self.module_name}_{self.model_underscore}.py'
 
     @property
     def view_file_name(self) -> str:
-        return f'{self.module_name}.{self.model_underscore}.xml'
+        return f'{self.module_name}_{self.model_underscore}.xml'
 
     @property
     def view_path(self) -> Path:
